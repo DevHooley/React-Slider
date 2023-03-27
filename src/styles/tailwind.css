@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+=============== 
+Variables
+===============
+*/
+@layer base {
+
+*,
+::after,
+::before {
+  @apply box-border m-0 p-0;
+}
+body {
+  @apply text-slate-700 leading-normal text-sm bg-slate-50
+}
+ul {
+  @apply list-none;
+}
+a {
+  @apply no-underline;
+}
+h1,
+h2,
+h3,
+h4 {
+  @apply capitalize leading-tight mb-3;
+}
+h1 {
+  @apply text-5xl;
+}
+h2 {
+  @apply text-4xl;
+}
+h3 {
+  @apply text-xl;
+}
+h4 {
+  @apply text-sm;
+}
+p {
+  @apply text-slate-500 mb-5;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    @apply text-7xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-base;
+  }
+  body {
+    @apply text-base;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply leading-none;
+  }
+}
+
+.section {
+  @apply w-11/12 max-w-max mx-auto my-20;
+}
+@media screen and (min-width: 992px) {
+  .section {
+    @apply w-11/12;
+  }
+}
+
+.title {
+  @apply text-center mb-8 capitalize text-slate-700 m-2;
+}
+.title h2 {
+  @apply flex items-center justify-center font-medium;
+}
+.title span {
+  @apply text-sm text-rose-500 font-bold mr-4;
+}
+.section-center {
+  @apply w-8/12 h-96 max-w-3xl text-center relative flex mt-16 mx-auto my-0; /* have to have a height */ /* overflow: hidden; */
+}
+.person-img {
+  @apply w-36 h-36 object-cover border-slate-200 shadow-md shadow-gray-600 mb-4 rounded-full border-4 border-solid;
+}
+article h4 {
+  @apply uppercase text-slate-500 mb-1;
+}
+.text {
+  @apply max-w-lg leading-loose text-slate-500 mt-8 mx-auto my-0;
+}
+.icon {
+  @apply text-5xl text-rose-500 mt-4;
+}
+.prev,
+.next {
+  @apply absolute -translate-y-2/4 text-white w-5 h-5 grid place-items-center text-base rounded-full cursor-pointer  border-transparent top-48 bg-slate-500;
+}
+.prev:hover,
+.next:hover {
+  @apply bg-rose-500
+}
+.prev {
+  @apply left-0;
+}
+.next {
+  @apply right-0;
+}
+@media (min-width: 800px) {
+  .text {
+    @apply max-w-2xl;
+  }
+  .prev,
+  .next {
+    @apply w-8 h-8 text-2xl;
+  }
+}
+article {
+  @apply absolute w-full h-full left-0 top-0; /* opacity: 0; */
+}
+}
